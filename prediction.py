@@ -2,17 +2,10 @@ import keras
 import cv2
 import numpy as np
 
-
-
-
-
-
 #pretrained model
 model = keras.models.load_model("./model.h5")
 
-
 classes = ['fish','humain','laptop','backpack','dog','billiard']
-
 
 #path to image for prediction
 file="./5.jpeg"
@@ -39,5 +32,3 @@ for i in pred :
 max = k.index(max(k))
 
 print(classes[max])
-
-
